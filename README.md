@@ -1,9 +1,18 @@
-# Nova Binder
+# Nova Binder — обновления
 
-Installers and signed updates for Windows 10/11 x64. Source code is maintained in a private repository.
+Публичный канал установщиков биндера для администрации GTA5RP.
 
-[Download the latest installer](https://github.com/blo0dy66/admin-releases/releases/latest).
+Скачайте **`Nova.Binder_<версия>_x64-setup.exe`** из [последнего релиза](https://github.com/blo0dy66/admin-releases/releases/latest). Нужны Windows 10/11 x64; установщик при необходимости докачает WebView2. Он устанавливается в профиль пользователя.
 
-Install this version once to enable future updates. Then use Settings → About → Updates in Nova Binder. Your profiles and statistics remain in `%APPDATA%\app.novabinder`.
+Со старого portable перейдите на установщик один раз. Следующие версии появятся в **Настройки → О программе → Обновления**. Перед установкой остановите биндер и инструменты. Обновления подписаны ключом Tauri; профили и статистика сохраняются. Это подпись канала обновлений, а не сертификат Windows Authenticode.
 
-Release assets: Windows installer, updater signature, `latest.json`, SHA-256 checksum. No administrator configuration or game credentials are published here.
+## Содержимое релиза
+
+- `*-setup.exe` — установщик для пользователя.
+- `*-setup.exe.sig` — подпись для проверки обновления.
+- `latest.json` — манифест встроенного updater.
+- `SHA256SUMS.txt` — контрольная сумма установщика.
+
+**Исходники биндера остаются закрытыми в `blo0dy66/admin`.** Этот репозиторий содержит только инструкции, а assets — дистрибутивы. GitHub автоматически показывает **Source code (zip/tar.gz)**: они архивируют README этого репозитория и не содержат код приложения. Для установки используйте `.exe`.
+
+Данные приложения находятся в `%APPDATA%\app.novabinder`; не публикуйте эту папку или личные настройки здесь.
